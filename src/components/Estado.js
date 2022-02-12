@@ -19,12 +19,14 @@ class Estado extends Component {
             contador: 0
         }
 
+        /*
         // Modificar el estado.
         setInterval(()=>{
             this.setState({
                 contador:this.state.contador + 1 
             })
         }, 1000);
+        */
 
     }
 

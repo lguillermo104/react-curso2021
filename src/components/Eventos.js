@@ -2,7 +2,7 @@ import React, { Component }from 'react';
 
 
 
-class Eventos extends Component {
+export class EventosES6 extends Component {
     constructor(props){
         super(props);
 
@@ -18,6 +18,8 @@ class Eventos extends Component {
         this.setState ({
             contador: this.state.contador + 1
         })
+
+        console.log(this);
     }
 
     restar(e){
@@ -25,12 +27,14 @@ class Eventos extends Component {
             contador: this.state.contador -1
         })
 
+        console.log(this);
+
     }
 
     render() {
         return (
             <div>
-                <h2> Eventos en componente de clase</h2>
+                <h2> Eventos en componente de clase ES6</h2>
                 <nav>
                     <button onClick = {this.sumar}>+</button>
                     <button onClick = {this.restar}>-</button>
@@ -42,4 +46,47 @@ class Eventos extends Component {
     }
 }
 
- export default  Eventos;
+// Las property initializers.
+export class EventosES7 extends Component {
+ 
+
+        state = {
+            contador: 0
+        }
+
+    
+// Arrows Funtions
+    sumar = (e) =>{
+        this.setState ({
+            contador: this.state.contador + 1
+        })
+
+        console.log(this);
+    }
+
+    restar = (e) =>{
+        this.setState({
+            contador: this.state.contador -1
+        })
+
+        console.log(this);
+
+    }
+
+    render() {
+        return (
+            <div>
+                <h2> Eventos en componente de clase ES7</h2>
+                <nav>
+                    <button onClick = {this.sumar}>+</button>
+                    <button onClick = {this.restar}>-</button>
+                </nav>
+                <h3> {this.state.contador}</h3>
+               
+            </div>
+        );
+    }
+}
+
+
+  ;
